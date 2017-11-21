@@ -29,5 +29,7 @@ module StackSearch
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    # Also autoload paths with the graphql types
+    config.autoload_paths << Rails.root.join("app", "graphql/types")
   end
 end
