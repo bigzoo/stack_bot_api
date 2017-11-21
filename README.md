@@ -1,5 +1,5 @@
 ## Usage Instructions
-Api is publicly availble at https://stoockle.herokuapp.com/api/v1.
+Api is publicly availble at https://staackle.herokuapp.com/api/v1.
 Only post requests are handled by the api and only what is requested is passed, as is the Graphql architecture by Facebook.
 Currently it can accept only one parameter which is a query string by the name "query" and with the next one you will be able to specify to only results from a spefic Stack Exchange.
 
