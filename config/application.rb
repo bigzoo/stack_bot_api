@@ -31,5 +31,9 @@ module StackSearch
     config.generators.system_tests = nil
     # Also autoload paths with the graphql types
     config.autoload_paths << Rails.root.join("app", "graphql/types")
+    config.action_dispatch.default_headers = {
+      'Access-Control-Allow-Origin' => %w{https://stoockle.herokuapp.com http://localhost:3000}.join(","),
+      'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+     }
   end
 end
