@@ -15,7 +15,21 @@ Currently it can accept only one parameter which is a query string by the name "
   field :score, types.Int
   field :owner_id, types.Int
   field :view_count, types.Int
-  ```
+
+```
+Sample curl query
+```
+curl -X POST \
+  https://staackle.herokuapp.com/api/v1 \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  -F 'query={
+  search(query: "rails token mismatch") {
+    title,link,tags
+  }
+}
+'
+```
   
   For more information on how to use GrapgQl, please visit 
   http://graphql.org/learn/
